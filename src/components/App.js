@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      appIconText: "loading icon",
+    };
+  }
+
   render() {
     return (
       <div className="app">
@@ -9,7 +16,7 @@ class App extends Component {
           <p>
             This is the first commit.
             <div className="appIcon">
-              <p className="appIcon__text">loading icon</p>
+              <p className="appIcon__text">{this.state.appIconText}</p>
               <img className="appIcon__image" alt="appIcon" src={process.env.PUBLIC_URL + '/images/App/appIcon.png'} />
             </div>
           </p>
